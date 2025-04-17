@@ -1,13 +1,16 @@
 import { recipes } from "./data/data.js";
 import RecipeContainer from "./RecipeContainer.jsx";
+import { Typography } from "@mui/material";
 
 function App() {
   return (
     <>
-    <h1>Family Recipes</h1>
-    <RecipeContainer recipes={recipes} />
+      <Typography variant="h4" color="primary" gutterBottom>
+        Family Recipes
+      </Typography>
+      <RecipeContainer recipes={recipes} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
