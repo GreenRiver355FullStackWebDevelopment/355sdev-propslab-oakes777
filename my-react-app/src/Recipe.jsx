@@ -9,7 +9,7 @@ import {
   Collapse,
   Box,
   FormControlLabel,
-  Checkbox
+  Checkbox,
 } from "@mui/material";
 
 function Recipe({ recipe }) {
@@ -68,8 +68,8 @@ function Recipe({ recipe }) {
                 <List>
                   {recipe.optionalGlaze.ingredients.map((item, i) => (
                     <ListItem key={i}>
-                    <FormControlLabel control={<Checkbox />} label={item} />
-                  </ListItem>
+                      <FormControlLabel control={<Checkbox />} label={item} />
+                    </ListItem>
                   ))}
                 </List>
                 <Box component="ol" sx={{ pl: 2 }}>
