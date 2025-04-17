@@ -8,6 +8,8 @@ import {
   Button,
   Collapse,
   Box,
+  FormControlLabel,
+  Checkbox
 } from "@mui/material";
 
 function Recipe({ recipe }) {
@@ -35,7 +37,9 @@ function Recipe({ recipe }) {
         <Typography variant="h6">Ingredients:</Typography>
         <List>
           {recipe.ingredients.map((item, i) => (
-            <ListItem key={i}>{item}</ListItem>
+            <ListItem key={i}>
+              <FormControlLabel control={<Checkbox />} label={item} />
+            </ListItem>
           ))}
         </List>
 
@@ -63,7 +67,9 @@ function Recipe({ recipe }) {
                 </Typography>
                 <List>
                   {recipe.optionalGlaze.ingredients.map((item, i) => (
-                    <ListItem key={i}>{item}</ListItem>
+                    <ListItem key={i}>
+                    <FormControlLabel control={<Checkbox />} label={item} />
+                  </ListItem>
                   ))}
                 </List>
                 <Box component="ol" sx={{ pl: 2 }}>
